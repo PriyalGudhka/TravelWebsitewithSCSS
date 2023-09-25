@@ -1,0 +1,194 @@
+/* Created an external stylesheet for styling the travelling website */
+
+@use 'sass:color';
+@use 'sass:math';
+
+/* Used class operator which is represented using . followed by the class name. Below line is used for positioning the items of navigation bar*/
+
+.travelo_home {
+    display: inline-flex;
+    position: fixed;
+}
+
+/* Used tag operator which is represented by writing the tag name. Below line will remove the bullets on the unordered list */
+
+/* Used Nesting property of the SCSS. */
+nav {
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding-left: 405px;
+        margin-right: 488px;
+    }
+
+    li {
+        margin: 10px;
+    }
+
+}
+
+/* Used General sibling selector which is represented by ~ symbol. Below line is used for highlighting the links on navigation bar with the below specified color*/
+.active_link~li>a {
+    color: rgb(126 140 160);
+}
+
+/* Used descendant selector which is represented by space. Below line is used to style the Connect button */
+div button {
+    border-radius: $basic_size;
+    float: right;
+    margin: margin_size(2);
+    border: none;
+    text-align: center;
+}
+
+.connect_button {
+    border-radius: margin_size(2); //Used custom function for setting the border radius of the 'Connect' button
+    height: 6%;
+    width: 12%;
+    border: none;
+    padding: 4px margin_size(1)+5px; //Used custom function and math function
+}
+
+.explore_now_button {
+    border-radius: $basic_size;
+    margin-top: 3px;
+    border: none;
+    float: left;
+    margin: margin_size(2) - 10px;
+}
+
+/* Used adjacent sibling selector which is represented by + symbol. Below line is used to sets the width of the image */
+h1+img {
+    width: 100%;
+    margin-top: math.ceil(39.5) * 1px;
+}
+
+.travel-to-explore {
+    position: absolute;
+    top: 25%;
+    left: 46%;
+    transform: $transform; //Used SCSS variables for using the transform property of CSS
+    color: $color;
+}
+
+.travel-to-explore_lorem {
+    position: absolute;
+    top: 35%;
+    left: 47%;
+    transform: $transform; //Used SCSS variables for using the transform property of CSS
+    color: rgb(245, 247, 247);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.explore-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: $transform; //Used SCSS variables for using the transform property of CSS
+    color: rgb(37, 36, 37);
+    border-radius: 7px;
+    background: $color; //Used SCSS variable for adding background color
+    width: 47%;
+    height: 8%;
+    opacity: .8;
+}
+
+/* Used Pseudo Class. This will help for positioning the button */
+
+button {
+    border-radius: 7px;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background-color: rgb(74, 100, 211);
+    color: $color;
+}
+
+button:hover {
+    background-color: rgb(46, 108, 207);
+}
+
+/* Used attribute selector which will select all the elements having attribute value as search. Below line is used to remove the borders of the textbox and making the textbox transparent */
+[type*="search"] {
+    @include form_input;
+}
+
+/* Used for making the date input transparent by using the attribute selector */
+input[placeholder$="Date"] {
+    @include form_input;
+}
+
+/* Used for increasing the transparency of the search icon */
+
+i {
+    opacity: 0.3;
+    font-size: 0.5%;
+}
+
+label.search {
+    display: block;
+}
+
+.input-form {
+    float: left;
+    margin: $basic_size;
+    margin-right: margin_size(2);
+}
+
+/* Used attribute selector which will select all the elements with tag div having attribute as name */
+
+div[name] {
+    border-right: 2px solid rgb(231, 232, 231);
+}
+
+/* '*' selects all the elements. Below line is used to set the font of the entire website */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.travelo_image {
+    width: 15%;
+    height: 10%;
+    margin: $basic_size;
+}
+
+.about {
+    display: flex;
+    margin-top: margin_size(7);
+    margin-bottom: margin_size(5);
+}
+
+.about_images {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: margin_size(3);
+}
+
+/* Used attribute selector which will select all the elements having class value as aboutSelection. Below line is used for creating the box around the section */
+
+[class^="aboutSection"] {
+    box-shadow: $box-shadow;
+    border-radius: $basic_size;
+    padding: 2px calc(($basic_size) / 2);
+    width: 20%;
+}
+
+.about_images+figcaption {
+    padding: 0px 11px;
+    color: rgb(29, 28, 29);
+}
+
+/* Used adjacent sibling selector */
+
+figcaption+p {
+    padding: 0px 11px;
+    font-size: calc(margin_size(1) + 2px);
+}

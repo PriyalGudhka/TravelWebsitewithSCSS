@@ -1,0 +1,3 @@
+@function margin_size($expected_size) {
+    @return $expected_size * $basic_size;
+}

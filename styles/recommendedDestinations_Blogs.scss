@@ -1,0 +1,243 @@
+/* Used math module */
+@use 'sass:math';
+
+/* Used flex property for aligning the images in the recommended destination section */
+
+.travelo_footer {
+    border: 30px solid none;
+    background: rgb(226, 232, 247);
+    border-radius: math.pow(2, 3) * 1px; //Used power inbuild function of math module
+    display: flex;
+}
+
+/* Used attribute selector which will select all the elements having attribute name with value as copyright */
+
+[name~="copyright"] {
+    color: rgb(55, 55, 59);
+    font-size: 5px+5px; //Used numeric operator for adding the font size
+    margin-top: 2.5%;
+    margin-left: math.abs(-4px);
+}
+
+/* Used attribute selector which will select all the elements having attribute name with value as footer or elements having value as footer followed by hyphen */
+
+[class |="footer"] {
+    padding-left: 275px;
+}
+
+/* Used child selector property */
+
+ul.footer-nav-links>li>a {
+    padding: 4px;
+}
+
+/* Used attribute selector which will select all the elements having attribute name with value as social */
+
+[type~="social"] {
+    padding: 3px;
+    font-size: 20px;
+    width: 20px;
+    margin: 26px 2px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    background: black;
+    color: $color;
+}
+
+/* Sets the height and width of all the destination images in the recommended destination section */
+
+.destinations {
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.singapore,
+.paris,
+.thailand,
+.new_zealand,
+.bora_bora,
+.london {
+    margin-top: 20px;
+    margin-left: 19px;
+}
+
+.destinationIcons {
+    width: 18%;
+}
+
+.recommended_destinations_nav {
+    padding-left: 350px;
+    margin-right: 50px;
+    margin-top: 35px;
+    position: relative;
+}
+
+ul.recommended_destinations_nav>li>a {
+    padding: 14px;
+    color: rgb(34, 53, 57);
+}
+
+/* Used pseudo element selector for highlighting the links in the recommended destination section */
+
+.recommended_destinations_nav_1::before {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid rgb(236, 238, 240);
+    bottom: 0;
+    width: 45%;
+    right: 198px;
+}
+
+/* Used pseudo element selector for highlighting the first link in the recommended destination section */
+
+.weekend_break:before {
+    content: '';
+    position: absolute;
+    border-bottom: 4px solid rgb(30, 49, 52);
+    width: 5%;
+    padding-left: 77px;
+    margin-top: 32px;
+
+}
+
+.recommended_destination_section {
+    margin-top: 90px;
+    box-shadow: $box-shadow; //Used SCSS variable property for adding box-shadow
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 28px;
+    margin-bottom: 50px;
+}
+
+/* Sets the properties of the blog section */
+
+img[class="mount_kilimanjaro"] {
+    float: left;
+    width: 100%;
+    height: 20%;
+    padding: 11px;
+    border-radius: 27px;
+}
+
+.blog2_blog_3 {
+    width: 643px;
+    max-height: 220px;
+    padding: 12px;
+    border-radius: 21px;
+}
+
+/* Sets the properties of the customer review section by aligning the elements */
+
+.happy_customers {
+    max-width: 10%;
+    float: left;
+    margin-left: 2%;
+}
+
+/* Used for aligning the customer review section */
+
+.customer_review {
+    display: flex;
+    padding: 30px 30px;
+}
+
+/* Sets the color of the review section */
+
+.happy_customers+figcaption {
+    color: rgb(56, 56, 56);
+}
+
+.customer_name+figcaption {
+    color: rgb(159, 158, 158);
+}
+
+/* Used for creating the box around the review section */
+
+.customer_review_1_2 {
+    box-shadow: $box-shadow; //Used SCSS variable property for adding box-shadow
+    border-radius: 10px;
+    width: 45%;
+    display: inline-block;
+    padding: 2px 33px;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+}
+
+.shalini_customer_review_2 {
+    @extend .shalini_customer_review_1;
+}
+
+.destination_distance_image {
+    display: block;
+    float: left;
+    margin-top: -14px;
+}
+
+.destination_price_details {
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+.destination_details {
+    display: flex;
+    float: left;
+    margin: 0px;
+    color: rgb(52, 70, 74);
+    font-weight: bold;
+}
+
+.blogs_text1 {
+    @include top_bottom_alignment; // Used @mixin directive for the aligning blog element
+    transform: translate(-0%, -50%);
+}
+
+.blogs_section2 {
+    @extend .blogs_section1; //Used @extend directive for the color and text alignment
+    margin-left: -416px;
+}
+
+.blogs_text {
+    @include top_bottom_alignment; // Used @mixin directive for the aligning blog element
+    transform: translate(0%, -250%);
+}
+
+.blogs_section3 {
+    @extend .blogs_section1; //Used @extend directive for the color and text alignment
+    margin-left: -416px;
+    margin-top: -130px;
+}
+
+
+.blogs_column {
+    width: 50%;
+    padding: 16px;
+}
+
+.blogs_row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blogs_column1 {
+    float: right;
+    width: 263px;
+    margin-top: -650px
+}
+
+.customers_section {
+    margin-top: -110px;
+}
+
+.fa.fa-quote-left {
+    color: rgb(184, 201, 244);
+    font-size: 35px;
+}
+
+.dot_matrix_1 {
+    @extend .dot_matrix;
+    padding-left: 1144px;
+}

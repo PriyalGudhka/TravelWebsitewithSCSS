@@ -1,0 +1,378 @@
+<!--Created a website which helps use to explore different destinations based on the location, check-in and check-out date. Webpage has different sections like Home, About, Places, Careers and Blogs-->
+
+<!-- Use of DOCTYPE html: Provides information to the browser about what type of document to expect-->
+<!DOCTYPE html>
+
+<!--Use of html tag: Contains all the other element and is the root of a HTML document-->
+<html>
+
+<!--Use of head tag: Contains data about data-->
+
+<head>
+
+    <!--Use of title tag: Defines the title of the document-->
+    <title>Travelo Home Page</title>
+
+    <!--Use of link tag: Links to an external stylesheet-->
+    <!--It is used for inserting buttons of Facebook, LinkedIn & Instagram on the Travelo webpage-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="travelo/main.css">
+
+</head>
+
+<!--Use of body tag: Contains the main content of the website-->
+
+<body>
+    <!--Below piece of code is used to create the Home Page of the Travelo website-->
+    <div class="travelo_home">
+        <!--Creates the navigation bar which will help in navigating the user to various sections like Home, About, Places, Careers & Blog-->
+
+        <img class="travelo_image" src="Assignment 4/Group 39708.png" alt="Travelo">
+
+        <!--Use of nav tag: Helps in navigating to different sections as it holds set of navigation links-->
+        <nav>
+            <!--Use of ul tag: Creates unordered list-->
+            <ul>
+                <!--Use of li tag: Represents an item in a list-->
+                <li class="active_link"><a href="#home-page">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#recommended_destination">Places</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li> <a href="#blogs">Blog</a> </li>
+            </ul>
+        </nav>
+        <button class="connect_button">Connect</button>
+
+    </div>
+    <br>
+
+    <!--Below piece of code is used to create the form wherein the user needs to enter the location, check-in date & check-out date-->
+    <div id="home-page">
+        <h1 class="travel-to-explore">TRAVEL TO EXPLORE</h1>
+        <img src="Assignment 4/lalo-hernandez-Amo081zdJsI-unsplash.png">
+        <div class="travel-to-explore_lorem">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing <br>Elit, Sed Do
+            Eliusmod Tempor Incididunt Ut Labore Et<br> Dolore Magna Aliqua. Ultricies Mi Eget Mauris</div>
+        <div class="explore-form">
+            <!--Creates the form using get method as we want the data from the user-->
+            <form method="get" action="Travelo_Home_Page.html">
+
+                <div class="input-form" name="search_destination">
+                    <label for="search-place" class="search">Where You Want to go</label>
+                    <i class="fa fa-search icon"></i>
+                    <input type="search" name="searchYourLocation" placeholder="Search Your Location" required
+                        pattern="[A-Za-z]+" title="Please enter alphabets to search the location">
+                </div>
+                <div class="input-form" name="add_check_in_date">
+                    <label for="check-in-date" class="search">Check-in</label>
+                    <input type="text" name="addDate" placeholder="Add Date" onfocus="(this.type='date')" required>
+                </div>
+                <div class="input-form">
+                    <label for="check-out-date" class="search">Check-out</label>
+                    <input type="text" name="addDate" placeholder="Add Date" onfocus="(this.type='date')" required>
+                </div>
+                <button class="explore_now_button">Explore Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Below piece of code is used to create different cards-->
+    <section class="about" id="about">
+        <figure class="aboutSection_best_price">
+            <img id="images" class="about_images" src="Assignment 4/get_best_prices.png">
+            <!--Use of figcaption tag: Defines the caption of a picture-->
+            <figcaption><b>Get Best Prices</b></figcaption>
+            <p>Pay through our application and <br> save thousands and get amazing <br> rewards</p>
+        </figure>
+
+        <figure class="aboutSection_covid_safe">
+            <img id="images" class="about_images" src="Assignment 4/covid_safe.png">
+            <!--Use of b tag: Writes the conent in bold-->
+            <figcaption><b>Covid Safe</b></figcaption>
+            <p>We have all the curated hotels that <br> have all the precaution for a covid <br> safe environment
+            </p>
+        </figure>
+
+        <figure class="aboutSection_flexible_payment">
+            <img id="images" class="about_images" src="Assignment 4/flexible_payment.png">
+            <figcaption><b>Flexible Payment</b></figcaption>
+            <!--Use of br tag: Inserts a line break -->
+            <p>Enjoy the flexible payment through our <br> app and get rewards on every payment</p>
+        </figure>
+
+        <figure class="aboutSection_best_place">
+            <img id="images" class="about_images" src="Assignment 4/best_nearby.png">
+
+            <figcaption><b>Find The Best Near You</b></figcaption>
+            <p>Find the best hotels and places to visit <br> near you in single click</p>
+        </figure>
+    </section>
+
+    <!--Below piece of code is used to create the list of recommended destination section-->
+
+    <!--Use of section tag: Defines a section in the document-->
+    <section id="recommended_destination" class="recommended_destination_section">
+        <h2><b>Recommended Destination</b></h2>
+        <!--Based on the package selected user will be navigated to the appropriate destinations-->
+        <nav>
+            <ul class="recommended_destinations_nav">
+                <!--Use of href tag: Creates a link to another page-->
+                <li><a href="#the_weekend_break" class="weekend_break">The Weekend Break</a></li>
+                <li class="recommended_destinations_nav_1"><a href="#the_package_holiday">The Package Holiday</a></li>
+                <li class="recommended_destinations_nav_1"><a href="#the_group_tour">The Group Tour</a></li>
+                <li class="recommended_destinations_nav_1"><a href="#long_term_slow_travel">Long Term Slow Travel</a>
+                </li>
+            </ul>
+        </nav>
+        <img src="Assignment 4/dot_matrix.png" class="dot_matrix">
+        <div class="first_row_destinations">
+            <!--Use of article tag: Specifies independent content-->
+            <article id="the_weekend_break" class="singapore">
+                <img class="destinations" src="Assignment 4/Singapore.png">
+                <h3><b>Singapore</b></h3>
+                <p class="destination_description_1">Singapore, officially the Republic of Singapore, is a <br>
+                    sovereign
+                    island city-state in maritime
+                    Southeast</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 2 night trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+            <article id="the_weekend_break" class="thailand">
+                <img class="destinations" src="Assignment 4/Thailand.png">
+                <!--Use of h3 tag: Defines the third level heading-->
+                <h3><b>Thailand</b></h3>
+                <!--Use of p tag: Defines a paragraph-->
+                <p class="destination_description_2">Thailand is a Southeast Asian country. It's known for<br> tropical
+                    beaches, opulent royal palaces</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 2 night trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+
+            <article id="the_package_holiday" class="paris">
+                <img class="destinations" src="Assignment 4/Paris.png">
+                <h3><b>Paris</b></h3>
+                <!--Use of p tag: Defines a paragraph-->
+                <p class="destination_description_3">Paris, France's capital, is a major European city and <br> a global
+                    center for art, fashion,
+                    gastonomy and</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 2 night trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+
+        </div>
+
+        <div class="second_row_destinations">
+            <article id="the_package_holiday" class="new_zealand">
+                <img class="destinations" src="Assignment 4/New_Zealand.png">
+                <h3><b>New Zealand</b></h3>
+                <p class="destination_description_4">New Zealand is an island country in the <br> southwestern Pacific
+                    Ocean. It consists of two main</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 1 night trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+
+            <article id="the_group_tour" class="bora_bora">
+                <!--Use of img tag: Inserts image on the webpage as per the relative address provided in the src attribute-->
+                <img class="destinations" src="Assignment 4/Bora_Bora.png">
+                <h3><b>Bora Bora</b></h3>
+                <p class="destination_description_5">Bora Bora is a small South Pacific island northwest <br> of Tahiti
+                    in
+                    French Polynesia. Surrounded by
+                    sand</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 2 night 2 day trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+
+            <article id="long_term_slow_travel" class="london">
+                <img class="destinations" src="Assignment 4/London.png">
+                <h3><b>London</b></h3>
+                <p class="destination_description_6">London, the capital of England and the United <br> Kingdom, is a 21
+                    st-century city with history</p>
+                <figure class="destination_details">
+                    <div class="destination_distance_image">
+                        <a href="https://www.hotels.com/">
+                            <img src="Assignment 4/rooms.png" class="destinationIcons"></a>
+                        <a href="http://dining.com/">
+                            <img src="Assignment 4/cutlery_set.png" class="destinationIcons"></a>
+                        <a href="https://www.flights.com/">
+                            <img src="Assignment 4/flight.png" class="destinationIcons"></a>
+                        <figcaption>1000 Kms</figcaption>
+                    </div>
+                    <div class="destination_price_details">
+                        <figcaption>₹38, 800</figcaption>
+                        <figcaption>Approx 3 night 2 day trip</figcaption>
+                    </div>
+                </figure>
+            </article>
+        </div>
+        <img src="Assignment 4/dot_matrix.png" class="dot_matrix_1">
+    </section>
+
+    <!--Below piece of code is used to create blogs-->
+    <section>
+        <div id="blogs">
+            <h2><b>Blogs</b></h2>
+            <div class="blogs_row">
+                <div class="blogs_column">
+                    <div class="blogs_section1">
+                        <img id="mount_kilimanjaro" class="mount_kilimanjaro" src="Assignment 4/Blog_1.png">
+                        <div class="blogs_text1">
+                            <h2>The Ultimate Guide <br> to Climbing <br> Mount Kilimanjaro</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="blogs_column1">
+
+                    <div class="blogs_section2">
+                        <img id="travelers" class="blog2_blog_3" src="Assignment 4/Blog_2.png">
+                        <div class="blogs_text">
+                            <h2>12 Things I'd Tell Any <br> New Traveler</h2>
+                        </div>
+                    </div>
+                    <div class="blogs_section3">
+                        <img id="female_travelers" class="blog2_blog_3" src="Assignment 4/Blog_3.png">
+                        <div class="blogs_text">
+                            <h2>The Ultimate Packing List for <br> Female Travelers</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Below piece of code is used to display the reviews of the customers-->
+    <br>
+    <section class="customers_section">
+        <!--Use of h2 tag: Defines the second level of heading-->
+        <h2><b>Happy Customers</b></h2>
+        <div class="customer_review">
+
+            <article class="customer_review_1_2">
+                <i class="fa fa-quote-left"></i>
+                <p class="shalini_customer_review_1">Lorem ipsum dolor sir amet, consectetur adipiscing elit, sed do
+                    <br>
+                    eiusmod tempor
+                    incididunt ut labore
+                    et dolore magna aliqua. Ultricies <br> mi eget mauris phareta. Amet risus nullam eget felis eget
+                    nunc
+                    <br> lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. <br> Viverra ipsum nunc
+                    aliquet
+                    bibendum enim. Risus pretium quam
+                </p>
+                <figure>
+                    <img id="happy_customers" class="happy_customers" src="Assignment 4/customer.png">
+                    <figcaption class="customer_name">Shalini Singh</figcaption>
+                    <figcaption>Project Manager flyhigh</figcaption>
+            </article>
+
+            <article class="customer_review_1_2">
+                <i class="fa fa-quote-left"></i>
+                <p class="shalini_customer_review_2" aria-hidden="true">Lorem ipsum dolor sir amet, consectetur
+                    adipiscing elit, sed do <br>
+                    eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ultricies <br> mi eget mauris phareta. Amet risus nullam eget felis eget
+                    nunc
+                    <br> lobortis. Purus in massa tempor nec. Porta nibh venenatis cras sed. <br> Viverra ipsum nunc
+                    aliquet
+                    bibendum enim. Risus pretium quam
+                </p>
+                <figure>
+                    <img id="happy_customers" class="happy_customers" src="Assignment 4/customer.png">
+                    <figcaption class="customer_name">Shalini Singh</figcaption>
+                    <figcaption>Project Manager flyhigh</figcaption>
+            </article>
+        </div>
+    </section>
+    <br>
+    <br>
+    </div>
+
+    <!--Below piece of code is used to create the footer of the webpage and holds links for navigating to various sections. Additionally, links for different social media platforms have been added-->
+    <!--Use of footer tag: Defines a footer for a page-->
+    <footer class="travelo_footer">
+
+        <p name="copyright section">Copyright © 2020 Travelo. All rights reserved</p>
+        <nav>
+            <ul class="footer-nav-links">
+                <li class="active_link"><a href="#home-page">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#recommended_destination">Places</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li> <a href="#blogs">Blog</a> </li>
+            </ul>
+        </nav>
+
+        <div id="careers">
+            <a href="https://www.facebook.com/" class="fa fa-facebook" type="social media"></a>
+            <a href="https://www.linkedin.com" class="fa fa-linkedin" type="social media"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" type="social media"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

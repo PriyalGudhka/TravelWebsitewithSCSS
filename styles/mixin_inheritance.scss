@@ -1,0 +1,28 @@
+/* This file has all the SASS mixins which is leveraged by other files */
+
+@mixin form_input {
+    background: transparent;
+    border: none;
+}
+
+@mixin top_bottom_alignment {
+    top: 50%;
+    bottom: 50%;
+}
+
+/* This file has all the SASS @extend directive and Inheritance which is leveraged by other files */
+
+.blogs_section1 {
+    text-align: center;
+    color: $color;
+}
+
+.shalini_customer_review_1 {
+    padding-left: 46px;
+    margin-top: -24px;
+}
+
+.dot_matrix {
+    position: absolute;
+    z-index: -1;
+}

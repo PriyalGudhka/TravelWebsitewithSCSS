@@ -1,0 +1,23 @@
+/* Below line imports the  variables stylesheet which contains variables SCSS which is futrther leveraged by the other pages */
+
+@import 'variables';
+
+/* Below line imports the  variables stylesheet which contains mixin SCSS which is futrther leveraged by the other pages */
+
+@import 'mixin_inheritance';
+
+/* Below line imports the  variables stylesheet which contains loops SCSS which is futrther leveraged by the other pages */
+
+@import 'loops';
+
+/* Below line imports the  custom_functions stylesheet which contains functions SCSS which is futrther leveraged by the other pages */
+
+@import 'custom_functions';
+
+/* Below line imports the  travelo stylesheet which is used to style the home page, about section and the form*/
+
+@import 'travelo';
+
+/* Below line imports the recommendedDestinatios_Blogs stylesheet which is used to style the Recommended Destination and Blogs section */
+
+@import 'recommendedDestinations_Blogs';

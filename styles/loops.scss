@@ -1,0 +1,41 @@
+/* Used each loop for styling the Recommended Destination section */
+
+@each $row in first,
+second {
+    .#{$row}_row_destinations {
+        display: flex;
+        padding-top: 8px;
+        flex-direction: row;
+        color: rgb(32, 51, 54);
+        z-index: -1;
+        padding-left: 110px;
+        padding-top: 70px;
+    }
+}
+
+/* Used while loop for styling the Navigation bar */
+
+/* Removes the links symbol form the navigation bar and will highlight the links with specified color */
+
+$count: 1;
+
+@while $count < 5 {
+    li>a {
+        text-decoration: none;
+        color: rgb(84, 110, 128);
+    }
+
+    $count: $count + 1;
+}
+
+/* Used for loop for adjustimg the font size of the destination captions */
+
+/* Removes the links symbol form the navigation bar and will highlight the links with specified color */
+
+$recommended_destination_captions: 6;
+
+@for $destination_caption from 1 through $recommended_destination_captions {
+    .destination_description_#{$destination_caption} {
+        font-size: ($recommended_destination_captions)*(2px)+4px;
+    }
+}
